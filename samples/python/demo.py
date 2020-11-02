@@ -17,8 +17,7 @@ def on_connect(client_id):
 
 @wechat.RECV_CALLBACK(in_class=False)
 def on_recv(client_id, message_type, message_data):
-    print('[on_recv] client_id: {0}, message_type: {1}, message:{2}'.format(client_id,
-                                                                            message_type, json.dumps(message_data)))
+    print(f'[on_recv] client_id: {client_id}, message_type: {message_type}, message:{message_data}')
 
 
 @wechat.CLOSE_CALLBACK(in_class=False)
